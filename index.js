@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const uri = ` mongodb+srv://portpolio:tYOvSrNupLrc2D7j@cluster0.ow5x2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority  `;
+const uri = ` mongodb+srv://${process.env.DB_User}:${process.env.DB_PASS}@cluster0.ow5x2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority  `;
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
